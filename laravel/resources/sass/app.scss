@@ -1,8 +1,23 @@
-// Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
 @import 'variables';
-
-// Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+$myspicycolor: #FF0000;
+
+.spicyClass {
+    background-color: black;
+    color: pink;
+
+    &-someothershit {
+        background-color: $myspicycolor;
+    }
+
+    &-owowhatsthis {
+        background-color: white;
+        color: black;
+    }
+}
+
+#owo {
+    background-color: $myspicycolor;
+}
