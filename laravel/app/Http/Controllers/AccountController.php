@@ -9,66 +9,48 @@ use Illuminate\Support\Facades\Hash;
 
 class AccountController extends Controller
 {
-    public function indexLogin() {
+    public function indexLogin()
+    {
         return view('account.login');
     }
 
-    public function doLogin(Request $request) {
-        $username = $request->get('username');
-        $password = $request->get('password');
+    public function doLogin(Request $request)
+    {
+        $this->validate($request, [
+            'username' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+        ]);
 
-        if ($username == null) {
-            return back()->with('error', 'Please enter a username');
+        $user_data = array(
+            'username' => $request->get('username'),
+            'password' => $request->get('password')
+        );
+
+        if (!Auth::attempt($user_data)) {
+            return back()->with('error', 'Wrong username or password');
         }
 
-        if ($password == null) {
-            return back()->with('error', 'Please enter a password');
-        }
-
-        if (User::where('username', '=', $username)->exists()) {
-            $this->validate($request, [
-                'username' => 'required',
-                'password' => 'required'
-            ]);
-
-            $user_data = array(
-                'username' => $request->get('username'),
-                'password' => $request->get('password')
-            );
-
-            if (Auth::attempt($user_data)) {
-                return redirect('/');
-            }
-        }
+        return redirect('/');
     }
 
-    public function indexRegister() {
+    public function indexRegister()
+    {
         return view('account.register');
     }
 
-    public function doRegister(Request $request) {
-        $username = $request->get('username');
-        $email = $request->get('email');
-        $password = $request->get('password');
-
-        if(User::where('username', '=', $username)->exists()) {
-            return back()->with('error', 'Username invalid. User with that name already exists.');
-        }
-        if ($username == null) {
-            return back()->with('error', 'Please enter a username');
-        }
-        if ($email == null) {
-            return back()->with('error', 'Please enter an email');
-        }
-        if ($password == null) {
-            return back()->with('error', 'Please enter a password');
-        }
+    public function doRegister(Request $request)
+    {
 
         $this->validate($request, [
             'username' => 'required',
             'email' => 'required',
             'password' => 'required'
         ]);
+
+        $username = $request->get('username');
+        $email = $request->get('email');
+        $password = $request->get('password');
 
         $user = new User();
         $user->username = $username;
@@ -82,11 +64,11 @@ class AccountController extends Controller
             'password' => $password
         );
 
-        if (Auth::attempt($user_data)) {
-            return redirect('/');
-        } else {
-            return back()->with('error', 'Something went wrong.');
+        if (!Auth::attempt($user_data)) {
+            return back()->with('error', 'Something went wrong');
         }
+
+        return redirect('/');
 
     }
 
