@@ -18,7 +18,6 @@ class AccountController extends Controller
     {
         $this->validate($request, [
             'username' => 'required',
-            'email' => 'required',
             'password' => 'required'
         ]);
 

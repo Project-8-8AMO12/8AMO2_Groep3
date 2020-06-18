@@ -44,6 +44,21 @@ body {
     border-color: $primary-color-lightgrey !important;
 }
 
+.btn-primary {
+    color: black;
+    background-color: $primary-color-yellow;
+    border-color: black;
+}
+
+.card {
+    border:0px;
+
+}
+
+.card-header {
+    background-color: #EEEEEE;
+}
+
 .navigation {
     background: $primary-color-white;
     color: $primary-color-black;
