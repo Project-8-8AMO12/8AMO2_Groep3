@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CMSPage;
 use App\Contact;
 use App\User;
 use Illuminate\Http\Request;
@@ -10,7 +11,9 @@ class PageController extends Controller
 {
     public function showHome() {
 
-        return view('page.home');
+        $page_content = CMSPage::where('content_name', '=', 'home')->first();
+
+        return view('page.home', ['page_content' => $page_content]);
 
     }
 

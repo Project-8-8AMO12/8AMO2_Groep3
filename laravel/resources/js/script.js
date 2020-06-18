@@ -1,5 +1,3 @@
-console.log('ree');
-
 window.showMobileNavigation = function () {
     document.getElementById('mobileNav').style.width = '100%';
 }
