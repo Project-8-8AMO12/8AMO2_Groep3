@@ -10940,7 +10940,28 @@ body {
   background: #FFFFFF;
 }
 
+.page-home-title {
+  font-weight: 800;
+  color: #9EB238;
+}
+
+.page-home--about li {
+  list-style: none;
+}
+
+.page-home--about b {
+  font-size: 1rem;
+  color: #9EB238;
+}
+
+.page-home--about a {
+  color: #FFD83E;
+}
+
 .page-home--sidebar {
+  display: flex;
+  flex-flow: column;
+  min-height: 600px;
   border-top-style: solid;
   border-top-color: #EEEEEE;
 }
@@ -10953,13 +10974,69 @@ body {
   }
 }
 
+.page-home--sidebar-cms {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #EEEEEE;
+}
+
+.page-home--sidebar-cms a {
+  color: #FFD83E;
+}
+
+.page-home--sidebar-cms b {
+  color: #9EB238;
+}
+
+.page-home--sidebar-cms li {
+  list-style: none;
+}
+
+.page-home--sidebar-cms ul {
+  margin-bottom: 0;
+}
+
+.page-home--email {
+  background: url("/images/honeycomb_patern.png");
+  color: #FFFFFF;
+}
+
+.page-home--email-form {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .page-home--email-form {
+    width: 50%;
+  }
+}
+
+.page-home--email-button {
+  background: #9EB238;
+  color: #FFFFFF;
+  border: 0;
+}
+
 .twitter-timeline {
-  height: 100%;
-  max-height: 100vh;
+  height: 100% !important;
   border-style: solid !important;
   border-width: 2px !important;
   border-color: #EEEEEE !important;
+}
 
+.btn-primary {
+  color: black;
+  background-color: #FFD83E;
+  border-color: black;
+}
+
+.card {
+  border: 0px;
+}
+
+.card-header {
+  background-color: #EEEEEE;
+}
 
 .navigation {
   background: #FFFFFF;

@@ -12,8 +12,10 @@ class PageController extends Controller
     public function showHome() {
 
         $page_content = CMSPage::where('content_name', '=', 'home')->first();
+        $sidebar_content = CMSPage::where('content_name', '=', 'sidebar')->first();
+        $newsletter_content = CMSPage::where('content_name', '=', 'subscribeToNewsletter')->first();
 
-        return view('page.home', ['page_content' => $page_content]);
+        return view('page.home', ['page_content' => $page_content, 'sidebar_content' => $sidebar_content, 'newsletter_content' => $newsletter_content]);
 
     }
 
