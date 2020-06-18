@@ -10932,14 +10932,43 @@ body {
   background: #EEEEEE;
 }
 
+.primary-title {
+  color: #9EB238;
+}
+
+.page-home {
+  background: #FFFFFF;
+}
+
+.page-home--sidebar {
+  border-top-style: solid;
+  border-top-color: #EEEEEE;
+}
+
+@media (min-width: 768px) {
+  .page-home--sidebar {
+    border-top-style: none;
+    border-left-style: solid;
+    border-left-color: #EEEEEE;
+  }
+}
+
+.twitter-timeline {
+  height: 100%;
+  max-height: 100vh;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: #EEEEEE !important;
+}
+
 .navigation {
-  background: white;
-  color: black;
+  background: #FFFFFF;
+  color: #000000;
 }
 
 .navigation a {
   font-size: 1rem;
-  color: black;
+  color: #000000;
 }
 
 .navigation a:hover {
@@ -10947,7 +10976,7 @@ body {
 }
 
 .navigation-mobile-overlay {
-  background: white;
+  background: #FFFFFF;
   height: 100vh;
   width: 0;
   position: fixed;
@@ -10972,14 +11001,14 @@ body {
 }
 
 .navigation-mobile-overlay--navigation-item a {
-  color: white;
+  color: #FFFFFF;
 }
 
 .navigation-hamburger-mobile {
   font-size: 3rem;
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 
-  
 #left-panel {
   background-image: url("/images/loginBackground.jpeg");
   height: 100vh;
@@ -10987,6 +11016,5 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
 }
 

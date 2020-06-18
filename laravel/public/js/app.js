@@ -49702,10 +49702,9 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
-var app = new Vue({
-  el: '#app'
-});
+// const app = new Vue({
+//     el: '#app',
+// });
 
 /***/ }),
 
@@ -49830,8 +49829,6 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log('ree');
-
 window.showMobileNavigation = function () {
   document.getElementById('mobileNav').style.width = '100%';
 };
@@ -49860,8 +49857,8 @@ window.hideMobileNavigation = function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/matthijs/Documents/git/8AMO2_Groep3/laravel/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/matthijs/Documents/git/8AMO2_Groep3/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Sander\Documents\Projects\8AMO2_Groep3\laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Sander\Documents\Projects\8AMO2_Groep3\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
