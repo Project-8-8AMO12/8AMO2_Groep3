@@ -10,6 +10,21 @@ body {
     background: #EEEEEE;
 }
 
+.btn-primary {
+    color: black;
+    background-color: $primary-color-yellow;
+    border-color: black;
+}
+
+.card {
+    border:0px;
+
+}
+
+.card-header {
+    background-color: #EEEEEE;
+}
+
 .navigation {
     background: white;
     color: black;
