@@ -100,6 +100,30 @@ body {
             }
         }
     }
+
+    &-agenda {
+        background: $primary-color-white;
+
+        &-title {
+            font-weight: 800;
+            color: $primary-color-green;
+        }
+
+        &--events {
+            li {
+                list-style: none;
+            }
+
+            b {
+                font-size: 1rem;
+                color: $primary-color-green;
+            }
+
+            a {
+                color: $primary-color-yellow;
+            }
+        }
+    }
 }
 
 .twitter-timeline {
