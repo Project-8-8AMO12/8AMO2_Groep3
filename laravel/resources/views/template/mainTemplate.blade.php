@@ -76,7 +76,7 @@
                                 </li>
 
                                 <li class="nav-item mx-auto">
-                                    <a class="nav-link py-0" href="/">Contact</a>
+                                    <a class="nav-link py-0" href="/contact">Contact</a>
                                 </li>
                             </ul>
                         </div>
