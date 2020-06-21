@@ -11052,6 +11052,11 @@ body {
   border-color: black;
 }
 
+.btn-primary:hover {
+  background-color: #FFD83E;
+  border-color: black;
+}
+
 .card {
   border: 0px;
 }
