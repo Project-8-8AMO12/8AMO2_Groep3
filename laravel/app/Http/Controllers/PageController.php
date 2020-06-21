@@ -21,7 +21,9 @@ class PageController extends Controller
 
     public function showAgenda() {
 
-        return "soon";
+        $page_content = CMSPage::where('content_name', '=', 'agenda')->first();
+
+        return view('page.agenda', ['page_content' => $page_content]);
 
     }
 

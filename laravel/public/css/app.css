@@ -11017,6 +11017,28 @@ body {
   border: 0;
 }
 
+.page-agenda {
+  background: #FFFFFF;
+}
+
+.page-agenda-title {
+  font-weight: 800;
+  color: #9EB238;
+}
+
+.page-agenda--events li {
+  list-style: none;
+}
+
+.page-agenda--events b {
+  font-size: 1rem;
+  color: #9EB238;
+}
+
+.page-agenda--events a {
+  color: #FFD83E;
+}
+
 .twitter-timeline {
   height: 100% !important;
   border-style: solid !important;
