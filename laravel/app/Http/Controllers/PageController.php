@@ -28,7 +28,9 @@ class PageController extends Controller
 
     public function showVereniging() {
 
-        return view("page.vereniging");
+        $page_content = CMSPage::where('content_name', '=', 'vereniging')->first();
+
+        return view("page.vereniging",  ['page_content' => $page_content]);
 
 }
 
