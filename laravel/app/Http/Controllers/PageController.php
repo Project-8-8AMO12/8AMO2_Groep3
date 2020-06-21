@@ -17,4 +17,10 @@ class PageController extends Controller
         return "soon";
 
     }
+
+    public function showVereniging() {
+
+        return view("page.vereniging");
+
+    }
 }

@@ -32,7 +32,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link pl-0 py-0 mr-2" href="/">De vereniging</a>
+                        <a class="nav-link pl-0 py-0 mr-2" href="{{ route('vereniging') }}">De vereniging</a>
                     </li>
 
                     <li class="nav-item">
@@ -130,7 +130,7 @@
 
                                 <div class="row mb-2 p-2 navigation-mobile-overlay--navigation-item">
                                     <div class="col px-0 d-flex">
-                                        <a href="/" class="h1 mb-0 w-100">De vereniging</a>
+                                        <a href="{{ route('vereniging') }}" class="h1 mb-0 w-100">De vereniging</a>
                                     </div>
                                 </div>
 
