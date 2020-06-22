@@ -7,6 +7,9 @@ Route::get('/vereniging', 'PageController@showVereniging')->name('vereniging');
 
 Route::get('/contact', 'PageController@showContact')->name('contact');
 Route::post('/contact', 'PageController@doContact')->name('doContact');
+Route::get('/admin', 'AdminController@indexAdmin')->name('admin');
+Route::get('/admin/{id}/edit', 'AdminController@editCMS')->name('editCMS');
+Route::post('/admin/{id}/edit', 'AdminController@updateCMS')->name('updateCMS');
 
 
 Route::get('/login','AccountController@indexLogin')->name('login');
