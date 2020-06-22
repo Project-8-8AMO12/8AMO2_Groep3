@@ -52,7 +52,7 @@
                 <div class="collapse navbar-collapse" id="basicExampleNav">
                     <ul class="navbar-nav w-100">
                         <li class="nav-item mx-auto">
-                            <a class="nav-link pl-0 py-0" href="/">Agenda</a>
+                            <a class="nav-link pl-0 py-0" href="{{ route('agenda') }}">Agenda</a>
                         </li>
 
                         <li class="nav-item mx-auto">
@@ -76,7 +76,7 @@
                         </li>
 
                         <li class="nav-item mx-auto">
-                            <a class="nav-link py-0" href="/">Contact</a>
+                            <a class="nav-link py-0" href="{{ route('contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -148,7 +148,7 @@
 
                                 <div class="row mb-2 p-2 navigation-mobile-overlay--navigation-item">
                                     <div class="col px-0 d-flex">
-                                        <a href="/" class="h1 mb-0 w-100">Agenda</a>
+                                        <a href="{{ route('agenda') }}" class="h1 mb-0 w-100">Agenda</a>
                                     </div>
                                 </div>
 
@@ -184,7 +184,7 @@
 
                                 <div class="row mb-2 p-2 navigation-mobile-overlay--navigation-item">
                                     <div class="col px-0 d-flex">
-                                        <a href="/" class="h1 mb-0 w-100">Contact</a>
+                                        <a href="{{ route('contact') }}" class="h1 mb-0 w-100">Contact</a>
                                     </div>
                                 </div>
 
