@@ -28,6 +28,15 @@ class PageController extends Controller
 
     }
 
+
+    public function showVereniging() {
+
+        $page_content = CMSPage::where('content_name', '=', 'vereniging')->first();
+
+        return view("page.vereniging",  ['page_content' => $page_content]);
+
+}
+
     public function showContact() {
         $users = User::all();
         return view('page.contact', compact('users'));
@@ -63,5 +72,6 @@ class PageController extends Controller
         $contact->save();
 
         return redirect('/');
+
     }
 }

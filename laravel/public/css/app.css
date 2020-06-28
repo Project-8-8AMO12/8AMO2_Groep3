@@ -11017,6 +11017,31 @@ body {
   border: 0;
 }
 
+.page-vereniging {
+  background: #FFFFFF;
+}
+
+.page-vereniging__maintitle {
+  color: #9EB238;
+}
+
+.page-vereniging__title {
+  color: #9EB238;
+  font-weight: bold;
+}
+
+.page-vereniging__subtitle {
+  color: #FFD83E;
+}
+
+.page-vereniging__info {
+  background: #FFD83E;
+}
+
+.page-vereniging__image {
+  align-self: center;
+}
+
 .page-agenda {
   background: #FFFFFF;
 }
