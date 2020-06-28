@@ -3,22 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\CMSPage;
+use App\Nieuwsbrief;
+use App\NieuwsbriefUsers;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AdminController extends Controller
 {
-    public function indexAdmin() {
+    public function indexAdmin()
+    {
         $pages = CMSPage::all();
-        return view('page.admin', compact('pages'));
+        $nieuwsbrief = Nieuwsbrief::latest()->first();
+        return view('page.admin', compact('pages', 'nieuwsbrief'));
     }
 
-    public function editCMS($id) {
+    public function editCMS($id)
+    {
         $page = CMSPage::find($id);
         return view('page.editCMS', compact('page'));
     }
 
-    public function updateCMS($id, Request $request) {
+    public function updateCMS($id, Request $request)
+    {
         $page = CMSPage::find($id);
         $page->content_block_1 = $request->get('content_block_1');
         $page->content_block_2 = $request->get('content_block_2');
@@ -34,13 +41,15 @@ class AdminController extends Controller
         return redirect('/admin');
     }
 
-    public function manageusers() {
+    public function manageusers()
+    {
         $admins = User::where('user_role', 'admin')->get();
         $mods = User::where('user_role', 'mod')->get();
         return view('page.manageuser', compact('admins', 'mods'));
     }
 
-    public function promote($id) {
+    public function promote($id)
+    {
         $mod = User::find($id);
         $mod->user_role = "admin";
         $mod->save();
@@ -48,10 +57,39 @@ class AdminController extends Controller
     }
 
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $mod = User::find($id);
         $mod->delete();
         return redirect('/manageusers');
+    }
+
+    public function doNieuwsbrief(Request $request)
+    {
+        try {
+            $request->validate([
+                'name' => 'required',
+                'file' => 'required',
+            ]);
+            $name = $request->get('name');
+            $file = $request->file('file');
+
+            $nieuwsbrief = new Nieuwsbrief();
+            $nieuwsbrief->name = $name;
+            $nieuwsbrief->file_name = Str::random(20);
+            $nieuwsbrief->save();
+
+            $file->storeAs('/nieuwsbrieven', $nieuwsbrief->file_name, 'public');
+
+            return redirect('/admin');
+        } catch(\Exception $e) {
+            return $e;
+        }
+    }
+
+    public function sendNieuwsbrief() {
+        $users = NieuwsbriefUsers::pluck('email');
+        return $users;
     }
 
 }
