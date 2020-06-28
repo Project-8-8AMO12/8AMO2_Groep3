@@ -11017,6 +11017,27 @@ body {
   border: 0;
 }
 
+.page-zwermgezien {
+  background: #FFFFFF;
+}
+
+.page-zwermgezien__title {
+  font-weight: 800;
+  color: #9EB238;
+}
+
+.page-zwermgezien__title-black {
+  font-weight: 800;
+  color: #000000;
+}
+
+.page-zwermgezien__report-bee-swarm {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #FFD83E;
+  border-radius: 10px;
+}
+
 .page-vereniging {
   background: #FFFFFF;
 }

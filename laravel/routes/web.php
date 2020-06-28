@@ -9,7 +9,7 @@ Route::get('/401', function () {
 
 Route::get('/', 'PageController@showHome')->name('home');
 Route::get('/agenda', 'PageController@showAgenda')->name('agenda');
-
+Route::get('/zwerm-gezien', 'PageController@showZwermGezien')->name('zwerm-gezien');
 Route::get('/vereniging', 'PageController@showVereniging')->name('vereniging');
 
 Route::get('/contact', 'PageController@showContact')->name('contact');

@@ -53,7 +53,7 @@
             </div>
 
             <div class="h-100 mb-2">
-                <a class="twitter-timeline" href="https://twitter.com/GemeenteLeiden?ref_src=twsrc%5Etfw">Tweets by GemeenteLeiden</a>
+                <a class="twitter-timeline" href="https://twitter.com/Leidse_Bijen?ref_src=twsrc%5Etfw">Tweets by GemeenteLeiden</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
