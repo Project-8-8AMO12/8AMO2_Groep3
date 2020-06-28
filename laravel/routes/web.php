@@ -14,11 +14,15 @@ Route::post('/contact', 'PageController@doContact')->name('doContact');
 Route::get('/admin', 'AdminController@indexAdmin')->name('admin')->middleware('mod.guard');
 Route::get('/admin/{id}/edit', 'AdminController@editCMS')->name('editCMS')->middleware('mod.guard');
 Route::post('/admin/{id}/edit', 'AdminController@updateCMS')->name('updateCMS')->middleware('mod.guard');
+Route::get('/manageusers', 'AdminController@manageusers')->name('manageusers')->middleware('admin.guard');
+Route::get('/manageusers/promote/{id}', 'AdminController@promote')->name('promote')->middleware('admin.guard');
+Route::get('/manageusers/delete/{id}', 'AdminController@delete')->name('delete')->middleware('admin.guard');
 
-Route::get('/login','AccountController@indexLogin')->name('login');
-Route::post('/login','AccountController@doLogin')->name('doLogin');
-Route::get('/register','AccountController@indexRegister')->name('register')->middleware('admin.guard');
-Route::post('/register','AccountController@doRegister')->name('doRegister')->middleware('admin.guard');
+
+Route::get('/login', 'AccountController@indexLogin')->name('login');
+Route::post('/login', 'AccountController@doLogin')->name('doLogin');
+Route::get('/register', 'AccountController@indexRegister')->name('register')->middleware('admin.guard');
+Route::post('/register', 'AccountController@doRegister')->name('doRegister')->middleware('admin.guard');
 
 //
 

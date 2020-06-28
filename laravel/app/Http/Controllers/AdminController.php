@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\CMSPage;
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -31,6 +32,26 @@ class AdminController extends Controller
         $page->save();
 
         return redirect('/admin');
+    }
+
+    public function manageusers() {
+        $admins = User::where('user_role', 'admin')->get();
+        $mods = User::where('user_role', 'mod')->get();
+        return view('page.manageuser', compact('admins', 'mods'));
+    }
+
+    public function promote($id) {
+        $mod = User::find($id);
+        $mod->user_role = "admin";
+        $mod->save();
+        return redirect('/manageusers');
+    }
+
+
+    public function delete($id) {
+        $mod = User::find($id);
+        $mod->delete();
+        return redirect('/manageusers');
     }
 
 }
