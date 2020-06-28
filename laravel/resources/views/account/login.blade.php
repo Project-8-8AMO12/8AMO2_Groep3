@@ -42,12 +42,6 @@
                     <input type="submit" name="login"
                            class="btn btn-warning btn-lg btn--no-border-radius my-3 mt-4 w-100" value="LOGIN"/>
                 </form>
-
-                <div class="row">
-                    <div class="col px-0 mt-4 text-center">
-                        <span>Don't have an account yet? <a href="/register">Register here</a></span>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

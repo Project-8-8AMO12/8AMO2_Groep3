@@ -55,6 +55,7 @@ class AccountController extends Controller
         $user->username = $username;
         $user->email = $email;
         $user->password = Hash::make($password);
+        $user->user_role = "mod";
 
         $user->save();
 
