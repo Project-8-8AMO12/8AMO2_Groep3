@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CMSPage;
 use App\Contact;
+use App\NieuwsbriefUsers;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -40,6 +41,20 @@ class PageController extends Controller
         $users = User::all();
         return view('page.contact', compact('users'));
 
+    }
+
+    public function doNieuwsbrief(Request $request) {
+        $request->validate([
+            'email' => 'required',
+        ]);
+
+        $email = $request->get('email');
+
+        $nieuwsbrief_users = new NieuwsbriefUsers();
+        $nieuwsbrief_users->email = $email;
+        $nieuwsbrief_users->save();
+
+        return redirect('/');
     }
 
     public function doContact(Request $request) {
