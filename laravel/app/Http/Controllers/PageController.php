@@ -27,6 +27,14 @@ class PageController extends Controller
 
     }
 
+    public function showZwermGezien()
+    {
+
+        $page_content = CMSPage::where('content_name', '=', 'zwerm-gezien')->first();
+
+        return view('page.zwermgezien', ['page_content' => $page_content]);
+
+    }
 
     public function showVereniging() {
 
