@@ -30,7 +30,7 @@ class AccountController extends Controller
             return back()->with('error', 'Wrong username or password');
         }
 
-        return redirect('/');
+        return redirect('/admin');
     }
 
     public function indexRegister()
@@ -55,6 +55,7 @@ class AccountController extends Controller
         $user->username = $username;
         $user->email = $email;
         $user->password = Hash::make($password);
+        $user->user_role = "mod";
 
         $user->save();
 
@@ -67,7 +68,7 @@ class AccountController extends Controller
             return back()->with('error', 'Something went wrong');
         }
 
-        return redirect('/');
+        return redirect('/admin');
 
     }
 
