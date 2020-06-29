@@ -146,6 +146,16 @@ body {
             align-self: center;
         }
     }
+    &-activiteiten {
+        &__title {
+            color: $primary-color-green;
+            font-weight: bold;
+        }
+        &__whiteTitle {
+            color: $primary-color-white;
+            font-weight: bold;
+        }
+    }
 
     &-agenda {
         background: $primary-color-white;

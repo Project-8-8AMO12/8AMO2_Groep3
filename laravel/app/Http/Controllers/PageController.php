@@ -45,6 +45,15 @@ class PageController extends Controller
 
 }
 
+
+    public function showActiviteiten() {
+
+        $page_content = CMSPage::where('content_name', '=', 'activiteiten')->first();
+
+        return view("page.activiteiten",  ['page_content' => $page_content]);
+
+    }
+
     public function showContact() {
         $users = User::all();
         return view('page.contact', compact('users'));
