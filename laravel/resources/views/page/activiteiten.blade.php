@@ -9,10 +9,10 @@
             </div>
         </div>
         <div class="row mt-5">
-
+            <div class="col-md-6 col-xs-6">
 
             {!! $page_content->content_block_1 ?? 'Content block 1' !!}
-
+            </div>
             <div class="col-md-6 col-xs-6 text-right d-flex">
                 <img class="w-75 rounded mx-auto mw-100 page-vereniging__image" src="{{ asset('images/placeholder.jpg') }}"/>
             </div>
