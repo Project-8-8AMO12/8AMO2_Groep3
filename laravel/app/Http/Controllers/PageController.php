@@ -28,6 +28,14 @@ class PageController extends Controller
 
     }
 
+    public function showZwermGezien()
+    {
+
+        $page_content = CMSPage::where('content_name', '=', 'zwerm-gezien')->first();
+
+        return view('page.zwermgezien', ['page_content' => $page_content]);
+
+    }
 
     public function showVereniging() {
 
@@ -36,6 +44,15 @@ class PageController extends Controller
         return view("page.vereniging",  ['page_content' => $page_content]);
 
 }
+
+
+    public function showActiviteiten() {
+
+        $page_content = CMSPage::where('content_name', '=', 'activiteiten')->first();
+
+        return view("page.activiteiten",  ['page_content' => $page_content]);
+
+    }
 
     public function showContact() {
         $users = User::all();

@@ -23,7 +23,7 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link pl-0 py-0 mr-2" href="/">Activiteiten</a>
+                        <a class="nav-link pl-0 py-0 mr-2" href="{{ route('activiteiten') }}">Activiteiten</a>
                     </li>
 
                     <li class="nav-item">
@@ -35,7 +35,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link pl-0 py-0 mr-2" href="/">Zwerm gezien?</a>
+                        <a class="nav-link pl-0 py-0 mr-2" href="{{ route('zwerm-gezien') }}">Zwerm gezien?</a>
                     </li>
 
                     <li class="nav-item">
@@ -117,7 +117,7 @@
 
                                 <div class="row mb-2 p-2 navigation-mobile-overlay--navigation-item">
                                     <div class="col px-0 d-flex">
-                                        <a href="/" class="h1 mb-0 w-100">Activiteiten</a>
+                                        <a href="{{ route('activiteiten') }}" class="h1 mb-0 w-100">Activiteiten</a>
                                     </div>
                                 </div>
 
@@ -135,7 +135,7 @@
 
                                 <div class="row mb-2 p-2 navigation-mobile-overlay--navigation-item">
                                     <div class="col px-0 d-flex">
-                                        <a href="/" class="h1 mb-0 w-100">Zwerm gezien?</a>
+                                        <a href="{{ route('zwerm-gezien') }}" class="h1 mb-0 w-100">Zwerm gezien?</a>
                                     </div>
                                 </div>
 

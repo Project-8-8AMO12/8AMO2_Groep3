@@ -101,6 +101,26 @@ body {
         }
     }
 
+    &-zwermgezien {
+        background: $primary-color-white;
+
+        &__title {
+            font-weight: 800;
+            color: $primary-color-green;
+
+            &-black {
+                font-weight: 800;
+                color: $primary-color-black;
+            }
+        }
+
+        &__report-bee-swarm {
+            border-style: solid;
+            border-width: 5px;
+            border-color: $primary-color-yellow;
+            border-radius: 10px;
+        }
+    }
 
     &-vereniging {
         background: $primary-color-white;
@@ -124,6 +144,16 @@ body {
 
         &__image {
             align-self: center;
+        }
+    }
+    &-activiteiten {
+        &__title {
+            color: $primary-color-green;
+            font-weight: bold;
+        }
+        &__whiteTitle {
+            color: $primary-color-white;
+            font-weight: bold;
         }
     }
 
