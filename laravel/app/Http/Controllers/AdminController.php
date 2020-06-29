@@ -76,7 +76,7 @@ class AdminController extends Controller
 
             $nieuwsbrief = new Nieuwsbrief();
             $nieuwsbrief->name = $name;
-            $nieuwsbrief->file_name = Str::random(20);
+            $nieuwsbrief->file_name = Str::random(20) . '.pdf';
             $nieuwsbrief->save();
 
             $file->storeAs('/nieuwsbrieven', $nieuwsbrief->file_name, 'public');

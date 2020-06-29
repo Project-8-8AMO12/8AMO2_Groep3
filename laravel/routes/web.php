@@ -19,7 +19,7 @@ Route::get('/admin', 'AdminController@indexAdmin')->name('admin')->middleware('m
 Route::get('/admin/{id}/edit', 'AdminController@editCMS')->name('editCMS')->middleware('mod.guard');
 Route::post('/admin/{id}/edit', 'AdminController@updateCMS')->name('updateCMS')->middleware('mod.guard');
 Route::post('/admin/nieuwsbrief', 'AdminController@doNieuwsbrief')->name('doNieuwsbrief')->middleware('admin.guard');
-Route::get('/admin/nieuwsbrief', 'AdminController@sendNieuwsbrief')->name('sendNieuwsbrief')->middleware('admin.guard');
+Route::get('/admin/nieuwsbrief', 'MailController@sendEmail')->name('sendNieuwsbrief')->middleware('admin.guard');
 Route::get('/manageusers', 'AdminController@manageusers')->name('manageusers')->middleware('admin.guard');
 Route::get('/manageusers/promote/{id}', 'AdminController@promote')->name('promote')->middleware('admin.guard');
 Route::get('/manageusers/delete/{id}', 'AdminController@delete')->name('delete')->middleware('admin.guard');
