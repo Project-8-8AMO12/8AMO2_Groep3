@@ -38,8 +38,9 @@
                 <div class="col page-home--email py-5">
                     <h2 class="text-center mb-0">{{ $newsletter_content->title ?? 'title - subscribeToNewsletter' }}</h2>
                     <div class="text-center">{!! $newsletter_content->content_block_1 ?? 'Content block 1 - subscribeToNewsletter' !!}</div>
-                    <form class="row page-home--email-form mx-auto">
-                        <input class="col text-center rounded-left border-top-0 border-bottom-0" placeholder="email" type="email" />
+                    <form class="row page-home--email-form mx-auto" method="POST" action="{{ url('nieuwsbrief') }}">
+                        {{ csrf_field() }}
+                        <input class="col text-center rounded-left border-top-0 border-bottom-0" placeholder="email" name="email" type="email" />
                         <input class="col-auto page-home--email-button rounded-right" type="submit" value="Aboneer"/>
                     </form>
                 </div>
@@ -52,7 +53,7 @@
             </div>
 
             <div class="h-100 mb-2">
-                <a class="twitter-timeline" href="https://twitter.com/GemeenteLeiden?ref_src=twsrc%5Etfw">Tweets by GemeenteLeiden</a>
+                <a class="twitter-timeline" href="https://twitter.com/Leidse_Bijen?ref_src=twsrc%5Etfw">Tweets by GemeenteLeiden</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>

@@ -39,6 +39,6 @@ class CreateCmsContentTable extends Migration
      */
     public function down()
     {
-
+        //
     }
 }
