@@ -12,21 +12,15 @@
         <div class="col-md-6 col-xs-6 text-right d-flex">
             <img class="w-75 rounded mx-auto mw-100 page-vereniging__image" src="{{ asset('images/placeholder.jpg') }}"/>
         </div>
-        <div class="col-md-6 col-xs-6">
-            <h2 class="page-vereniging__subtitle">yes this title</h2>
-            <h1 class="page-vereniging__title">is made out of title</h1>
-            <p>{!! $page_content->content_block_1 ?? 'Content block 1' !!}</p>
 
-        </div>
+       {!! $page_content->content_block_1 ?? 'Content block 1' !!}
+
     </div>
     <div class="row mt-3">
 
-        <div class="col-md-6 col-xs-6 text-right">
-            <h2 class="page-vereniging__subtitle">yes this title</h2>
-            <h1 class="page-vereniging__title">is made out of title</h1>
-            <p>{!! $page_content->content_block_2 ?? 'Content block 2' !!}</p>
+       {!! $page_content->content_block_2 ?? 'Content block 2' !!}
 
-        </div>
+
         <div class="col-md-6 col-xs-6 d-flex">
             <img class="w-75 rounded mx-auto mw-100 page-vereniging__image" src="{{ asset('images/placeholder.jpg') }}"/>
         </div>
@@ -34,7 +28,7 @@
     <div class="row mt-3">
 
         <div class="col">
-            <h2 class="page-vereniging__subtitle">yes this is a title</h2>
+
             <p>{!! $page_content->content_block_3 ?? 'Content block 3' !!}</p>
 
         </div>
@@ -47,8 +41,7 @@
             <img class="w-75 rounded mx-auto page-vereniging__image" src="{{ asset('images/placeholder.jpg') }}"/>
         </div>
         <div class="col-md-6 col-xs-6">
-            <h2 class="page-vereniging__subtitle">yes this title</h2>
-            <h1 class="page-vereniging__title">is made out of title</h1>
+
             <p>{!! $page_content->content_block_4 ?? 'Content block 4' !!}</p>
 
         </div>
@@ -57,7 +50,7 @@
     <div class="row mt-3">
 
         <div class="col">
-            <h2 class="page-vereniging__subtitle">yes this is a title</h2>
+
             <p>{!! $page_content->content_block_5 ?? 'Content block 5' !!}</p>
 
         </div>
@@ -69,8 +62,7 @@
             <img class="w-75 rounded mx-auto page-vereniging__image" src="{{ asset('images/placeholder.jpg') }}"/>
         </div>
         <div class="col-md-6 col-xs-6">
-            <h2 class="page-vereniging__subtitle">yes this title</h2>
-            <h1 class="page-vereniging__title">is made out of title</h1>
+
             <p>{!! $page_content->content_block_6 ?? 'Content block 6' !!}</p>
 
         </div>
