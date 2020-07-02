@@ -11063,6 +11063,16 @@ body {
   align-self: center;
 }
 
+.page-activiteiten__title {
+  color: #9EB238;
+  font-weight: bold;
+}
+
+.page-activiteiten__whiteTitle {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
 .page-agenda {
   background: #FFFFFF;
 }

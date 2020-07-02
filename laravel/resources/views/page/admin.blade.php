@@ -45,11 +45,15 @@
             </div>
             <div class="col-sm-6">
                 <h1>Nieuwsbrief versturen.</h1>
-                    @if($nieuwsbrief->sent == 0)
-                        <p>De meest recent nieuwsbrief is nog niet verzonden.</p>
-                        <a href="/admin/nieuwsbrief" class="btn btn-primary">Verstuur de meeste recente nieuwsbrief!</a>
+                    @if($nieuwsbrief)
+                        @if($nieuwsbrief->sent == 0)
+                            <p>De meest recent nieuwsbrief is nog niet verzonden.</p>
+                            <a href="/admin/nieuwsbrief" class="btn btn-primary">Verstuur de meeste recente nieuwsbrief!</a>
+                        @else
+                            <p>De meest recent nieuwsbrief is al verzonden.</p>
+                        @endif
                     @else
-                        <p>De meest recent nieuwsbrief is al verzonden.</p>
+                        <p>Er is nog geen nieuwsbrief aangemaakt!</p>
                     @endif
             </div>
         </div>
